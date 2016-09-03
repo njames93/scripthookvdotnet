@@ -70,7 +70,7 @@ namespace GTA
 		public PedGroup() : base(Function.Call<int>(Hash.CREATE_GROUP, 0))
 		{
 		}
-		public PedGroup(int handle) : base(handle)
+		public PedGroup(PoolHandle handle) : base(handle)
 		{
 		}
 

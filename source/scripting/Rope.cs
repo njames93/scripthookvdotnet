@@ -12,7 +12,7 @@ namespace GTA
 
 	public sealed class Rope : PoolObject, IEquatable<Rope>
 	{
-		public Rope(int handle) : base(handle)
+		public Rope(PoolHandle handle) : base(handle)
 		{
 		}
 

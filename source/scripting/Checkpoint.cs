@@ -200,7 +200,7 @@ namespace GTA
 	}
 	public sealed class Checkpoint : PoolObject, IEquatable<Checkpoint>
 	{
-		public Checkpoint(int handle) : base(handle)
+		public Checkpoint(PoolHandle handle) : base(handle)
 		{
 		}
 

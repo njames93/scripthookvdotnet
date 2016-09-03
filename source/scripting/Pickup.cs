@@ -81,7 +81,7 @@ namespace GTA
 
 	public sealed class Pickup : PoolObject, IEquatable<Pickup>
 	{
-		public Pickup(int handle) : base(handle)
+		public Pickup(PoolHandle handle) : base(handle)
 		{
 		}
 

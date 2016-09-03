@@ -128,6 +128,7 @@
     <CsCompile Include="source\scripting\EntityBoneCollection.cs" />
     <CsCompile Include="source\scripting\PedBone.cs" />
     <CsCompile Include="source\scripting\PedBoneCollection.cs" />
+    <CsCompile Include="source\scripting\PoolHandle.cs" />
     <CsCompile Include="source\scripting\Style.cs" />
     <CsCompile Include="source\scripting\Controls.cs" />
     <CsCompile Include="source\scripting\Entity.cs" />

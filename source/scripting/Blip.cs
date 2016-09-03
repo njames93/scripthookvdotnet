@@ -232,7 +232,7 @@ namespace GTA
 
 	public sealed class Blip : PoolObject, IEquatable<Blip>
 	{
-		public Blip(int handle) : base(handle)
+		public Blip(PoolHandle handle) : base(handle)
 		{
 		}
 

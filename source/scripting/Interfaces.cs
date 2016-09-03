@@ -21,16 +21,16 @@ namespace GTA
 
 	public abstract class PoolObject : INativeValue, IDeletable
 	{
-		protected PoolObject(int handle)
+		protected PoolObject(PoolHandle handle)
 		{
 			Handle = handle;
 		}
 
-		public int Handle { get; protected set; }
+		public PoolHandle Handle { get; protected set; }
 		public ulong NativeValue
 		{
 			get { return (ulong)Handle; }
-			set { Handle = unchecked((int)value); }
+			set { Handle = unchecked((uint)value); }
 		}
 
 		public abstract bool Exists();

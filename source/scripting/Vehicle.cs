@@ -289,7 +289,7 @@ namespace GTA
 		VehicleWindowCollection _windows;
 		#endregion
 
-		public Vehicle(int handle) : base(handle)
+		public Vehicle(PoolHandle handle) : base(handle)
 		{
 		}
 

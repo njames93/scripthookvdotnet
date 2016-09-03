@@ -21,7 +21,7 @@ namespace GTA
 		private EntityBoneCollection _bones;
 		#endregion
 
-		public Entity(int handle) : base(handle)
+		public Entity(PoolHandle handle) : base(handle)
 		{
 		}
 

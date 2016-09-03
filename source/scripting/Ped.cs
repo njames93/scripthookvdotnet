@@ -161,7 +161,7 @@ namespace GTA
 		#endregion
 
 
-		public Ped(int handle) : base(handle)
+		public Ped(PoolHandle handle) : base(handle)
 		{
 		}
 

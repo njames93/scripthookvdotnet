@@ -37,7 +37,7 @@ namespace GTA
 		};
 		#endregion
 
-		public Camera(int handle) : base(handle)
+		public Camera(PoolHandle handle) : base(handle)
 		{
 		}
 

@@ -472,7 +472,7 @@ namespace GTA
 		/// Determines if this <see cref="Checkpoint"/> exists.
 		/// </summary>
 		/// <returns><c>true</c> if this <see cref="Checkpoint"/> exists; otherwise, <c>false</c>.</returns>
-		public override bool Exists()
+		public override bool IsValid()
 		{
 			return Handle != 0 && MemoryAddress != IntPtr.Zero;
 		}
@@ -480,9 +480,9 @@ namespace GTA
 		/// Determines if a specific <see cref="Checkpoint"/> exists.
 		/// </summary>
 		/// <returns><c>true</c> if the <paramref name="checkpoint"/> exists; otherwise, <c>false</c>.</returns>
-		public static bool Exists(Checkpoint checkpoint)
+		public static bool IsValid(Checkpoint checkpoint)
 		{
-			return !ReferenceEquals(checkpoint, null) && checkpoint.Exists();
+			return !ReferenceEquals(checkpoint, null) && checkpoint.IsValid();
 		}
 
 		/// <summary>

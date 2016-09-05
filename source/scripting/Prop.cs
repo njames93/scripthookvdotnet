@@ -13,7 +13,7 @@ namespace GTA
 		/// Determines whether this <see cref="Prop"/> exists.
 		/// </summary>
 		/// <returns><c>true</c> if this <see cref="Prop"/> exists; otherwise, <c>false</c></returns>
-		public new bool Exists()
+		public new bool IsValid()
 		{
 			return Function.Call<int>(Hash.GET_ENTITY_TYPE, Handle) == 3;
 		}
@@ -22,9 +22,9 @@ namespace GTA
 		/// </summary>
 		/// <param name="prop">The <see cref="Prop"/> to check.</param>
 		/// <returns><c>true</c> if the <see cref="Prop"/> exists; otherwise, <c>false</c></returns>
-		public static bool Exists(Prop prop)
+		public static bool IsValid(Prop prop)
 		{
-			return !ReferenceEquals(prop, null) && prop.Exists();
+			return !ReferenceEquals(prop, null) && prop.IsValid();
 		}
 	}
 }

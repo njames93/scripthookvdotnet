@@ -1551,7 +1551,7 @@ namespace GTA
 		/// Determines whether this <see cref="Ped"/> exists.
 		/// </summary>
 		/// <returns><c>true</c> if this <see cref="Ped"/> exists; otherwise, <c>false</c></returns>
-		public new bool Exists()
+		public new bool IsValid()
 		{
 			return Function.Call<int>(Hash.GET_ENTITY_TYPE, Handle) == 1;
 		}
@@ -1560,9 +1560,9 @@ namespace GTA
 		/// </summary>
 		/// <param name="ped">The <see cref="Ped"/> to check.</param>
 		/// <returns><c>true</c> if the <see cref="Ped"/> exists; otherwise, <c>false</c></returns>
-		public static bool Exists(Ped ped)
+		public static bool IsValid(Ped ped)
 		{
-			return !ReferenceEquals(ped, null) && ped.Exists();
+			return !ReferenceEquals(ped, null) && ped.IsValid();
 		}
 	}
 }

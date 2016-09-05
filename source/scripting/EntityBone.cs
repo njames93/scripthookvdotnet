@@ -237,7 +237,7 @@ namespace GTA
 		/// </value>
 		public bool IsValid
 		{
-			get { return Entity.Exists(_owner) && _index != -1; }
+			get { return _owner.IsValid() && _index != -1; }
 		}
 
 		/// <summary>

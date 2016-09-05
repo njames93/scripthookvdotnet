@@ -418,13 +418,13 @@ namespace GTA
 			Function.Call(Hash.DESTROY_CAM, Handle, 0);
 		}
 
-		public override bool Exists()
+		public override bool IsValid()
 		{
 			return Function.Call<bool>(Hash.DOES_CAM_EXIST, Handle);
 		}
-		public static bool Exists(Camera camera)
+		public static bool IsValid(Camera camera)
 		{
-			return !ReferenceEquals(camera, null) && camera.Exists();
+			return !ReferenceEquals(camera, null) && camera.IsValid();
 		}
 
 		public bool Equals(Camera camera)

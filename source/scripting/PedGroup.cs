@@ -48,7 +48,7 @@ namespace GTA
 					_currentIndex++;
 					_current = _currentIndex < 0 ? _group.Leader : _group.GetMember(_currentIndex);
 
-					if (Ped.Exists(_current))
+					if (_current.Exists())
 					{
 						return true;
 					}
@@ -185,13 +185,13 @@ namespace GTA
 			Function.Call(Hash.REMOVE_GROUP, Handle);
 		}
 
-		public override bool Exists()
+		public override bool IsValid()
 		{
 			return Function.Call<bool>(Hash.DOES_GROUP_EXIST, Handle);
 		}
-		public static bool Exists(PedGroup pedGroup)
+		public static bool IsValid(PedGroup pedGroup)
 		{
-			return !ReferenceEquals(pedGroup, null) && pedGroup.Exists();
+			return !ReferenceEquals(pedGroup, null) && pedGroup.IsValid();
 		}
 
 		public bool Equals(PedGroup pedGroup)

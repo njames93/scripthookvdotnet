@@ -88,7 +88,7 @@ namespace GTA
 			Handle = handle;
 		}
 
-        public override bool Exists()
+        public override bool IsValid()
 		{
             int handle = Handle;
 	        unsafe
@@ -96,9 +96,9 @@ namespace GTA
 		        return Function.Call<bool>(Hash.DOES_ROPE_EXIST, &handle);
 	        }
 		}
-		public static bool Exists(Rope rope)
+		public static bool IsValid(Rope rope)
 		{
-			return !ReferenceEquals(rope, null) && rope.Exists();
+			return !ReferenceEquals(rope, null) && rope.IsValid();
 		}
 
 		public bool Equals(Rope rope)

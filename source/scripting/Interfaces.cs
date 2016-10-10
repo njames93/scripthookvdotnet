@@ -11,7 +11,7 @@ namespace GTA
 
 	public interface IExistable
 	{
-		bool Exists();
+		bool IsValid();
 	}
 
 	public interface IDeletable : IExistable
@@ -33,7 +33,7 @@ namespace GTA
 			set { Handle = unchecked((int)value); }
 		}
 
-		public abstract bool Exists();
+		public abstract bool IsValid();
 
 		public abstract void Delete();
 	}

@@ -1215,7 +1215,7 @@ namespace GTA
 		/// Determines whether this <see cref="Entity"/> exists.
 		/// </summary>
 		/// <returns><c>true</c> if this <see cref="Entity"/> exists; otherwise, <c>false</c></returns>
-		public override bool Exists()
+		public override bool IsValid()
 		{
 			return Function.Call<bool>(Hash.DOES_ENTITY_EXIST, Handle);
 		}
@@ -1224,9 +1224,9 @@ namespace GTA
 		/// </summary>
 		/// <param name="entity">The <see cref="Entity"/> to check.</param>
 		/// <returns><c>true</c> if the <see cref="Entity"/> exists; otherwise, <c>false</c></returns>
-		public static bool Exists(Entity entity)
+		public static bool IsValid(Entity entity)
 		{
-			return !ReferenceEquals(entity, null) && entity.Exists();
+			return !ReferenceEquals(entity, null) && entity.IsValid();
 		}
 		/// <summary>
 		/// Checks if two <see cref="Entity"/>s refer to the same <see cref="Entity"/>

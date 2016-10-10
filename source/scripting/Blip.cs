@@ -461,13 +461,13 @@ namespace GTA
 			Handle = handle;
 		}
 
-		public override bool Exists()
+		public override bool IsValid()
 		{
 			return Function.Call<bool>(Hash.DOES_BLIP_EXIST, Handle);
 		}
-		public static bool Exists(Blip blip)
+		public static bool IsValid(Blip blip)
 		{
-			return !ReferenceEquals(blip, null) && blip.Exists();
+			return !ReferenceEquals(blip, null) && blip.IsValid();
 		}
 
 		public bool Equals(Blip blip)

@@ -1390,7 +1390,7 @@ namespace GTA
 			{
 				Ped driver = Driver;
 
-				if (!Ped.Exists(driver))
+				if (!driver.Exists())
 				{
 					return Passengers;
 				}
@@ -1706,7 +1706,7 @@ namespace GTA
 		{
 			Vehicle vehicle = TowedVehicle;
 
-			if (Exists(vehicle))
+			if (IsValid(vehicle))
 			{
 				Function.Call(Hash.DETACH_VEHICLE_FROM_TOW_TRUCK, Handle, vehicle.Handle);
 			}
@@ -1783,7 +1783,7 @@ namespace GTA
 		/// Determines whether this <see cref="Vehicle"/> exists.
 		/// </summary>
 		/// <returns><c>true</c> if this <see cref="Vehicle"/> exists; otherwise, <c>false</c></returns>
-		public new bool Exists()
+		public new bool IsValid()
 		{
 			return Function.Call<int>(Hash.GET_ENTITY_TYPE, Handle) == 2;
 		}
@@ -1792,9 +1792,9 @@ namespace GTA
 		/// </summary>
 		/// <param name="vehicle">The <see cref="Vehicle"/> to check.</param>
 		/// <returns><c>true</c> if the <see cref="Vehicle"/> exists; otherwise, <c>false</c></returns>
-		public static bool Exists(Vehicle vehicle)
+		public static bool IsValid(Vehicle vehicle)
 		{
-			return !ReferenceEquals(vehicle, null) && vehicle.Exists();
+			return !ReferenceEquals(vehicle, null) && vehicle.IsValid();
 		}
 
 	}

@@ -106,13 +106,13 @@ namespace GTA
 			Function.Call(Hash.REMOVE_PICKUP, Handle);
 		}
 
-		public override bool Exists()
+		public override bool IsValid()
 		{
 			return Function.Call<bool>(Hash.DOES_PICKUP_EXIST, Handle);
 		}
-		public static bool Exists(Pickup pickup)
+		public static bool IsValid(Pickup pickup)
 		{
-			return !ReferenceEquals(pickup, null) && pickup.Exists();
+			return !ReferenceEquals(pickup, null) && pickup.IsValid();
 		}
 		public bool ObjectExists()
 		{

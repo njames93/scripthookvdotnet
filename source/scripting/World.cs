@@ -711,7 +711,7 @@ namespace GTA
 
 			var result = new List<Vehicle>();
 			Vehicle ignore = ped.CurrentVehicle;
-			int ignoreHandle = Vehicle.Exists(ignore) ? ignore.Handle : 0;
+			int ignoreHandle = ignore.Exists() ? ignore.Handle : 0;
 
 			foreach (int handle in handles)
 			{
@@ -1318,7 +1318,7 @@ namespace GTA
 		/// <param name="invisible">if set to <c>true</c> explosion is invisible.</param>
 		public static void AddExplosion(Vector3 position, ExplosionType type, float radius, float cameraShake, Ped owner = null, bool aubidble = true, bool invisible = false)
 		{
-			if (Entity.Exists(owner))
+			if (owner.Exists())
 			{
 				Function.Call(Hash.ADD_OWNED_EXPLOSION, owner.Handle, position.X, position.Y, position.Z, type, radius, aubidble, invisible, cameraShake);
 			}

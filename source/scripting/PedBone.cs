@@ -33,7 +33,7 @@ namespace GTA
 		{
 			get
 			{
-				return Ped.Exists(Owner) && Index != -1;
+				return Owner.Exists() && Index != -1;
 			}
 		}
 	}

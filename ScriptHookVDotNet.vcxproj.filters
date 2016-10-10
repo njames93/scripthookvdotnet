@@ -272,5 +272,8 @@
     <CsCompile Include="source\scripting\EntityBoneCollection.cs">
       <Filter>scripting\World\Entities</Filter>
     </CsCompile>
+    <CsCompile Include="source\scripting\Extensions.cs">
+      <Filter>scripting</Filter>
+    </CsCompile>
   </ItemGroup>
 </Project>
